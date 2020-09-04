@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none; 
+    list-style: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+$header-color: white; 
+$body-color: grey; 
+$centertext: center; 
+$mellemrumfravenstre: 70px;
+$ingenstyling: none; 
+$paalinje: inline-block; 
+$sortfarve: black; 
+$skriftstarrelse: 17px; 
+$hajreskift: right; 
+
+
+
+body {
+    background-color: lighten($body-color,45%);;
+}
+nav{
+    background: $sortfarve;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    ul {
+        float: $hajreskift;
+        margin-right: 20px;
+    li {
+        display: $paalinje;
+        line-height: 80px;
+        margin: 0 5px;
+    a {
+        color: $header-color;
+        font-size: $skriftstarrelse;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    &:hover {
+        background: $body-color;
+        transition: .5s;
+        }
+    }
+    }
+    }
+}
+label.logo{
+    color: $header-color;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+.overskrift1 {   
+    text-align: center;
+    padding-top: 450px;
+    h1 {
+        padding-top: 200px;
+    }
+}
+h1 {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+h2 {
+    padding-left: $mellemrumfravenstre;
+}
+.text1 {
+    padding-left: $mellemrumfravenstre;
+    line-height: 27px;
+    font-size: $skriftstarrelse;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.text2 {
+    @extend .text1; 
+}
+h3 {
+    text-align: $centertext;
+}
+h4 {
+    padding-left: $mellemrumfravenstre;
+}
+
+img {
+    width: 40%;
+    float: right;
+    margin-right: 40px;
+    border: 5px solid $sortfarve;
+}
+
+figcaption {
+    @extend .text1; 
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: $sortfarve;
+  text-align: $centertext;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  p {
+      color: $header-color;
+  }
+  li {
+      display: $paalinje;
+  }
+  a {
+    color: #0060B6;
+    text-decoration: $ingenstyling;
+  }
+}
